@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shu-vod-downloader"
+version = "0.1.0"
+description = "上海大学录播课程检索与 aria2 下载 CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["requests>=2.31,<3", "cryptography>=42", "textual>=8.2,<9"]
+
+[project.scripts]
+shu-vod = "shu_vod.cli:main"
+shu-vod-tui = "shu_vod.tui:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY.md"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shu_vod*"]
+
