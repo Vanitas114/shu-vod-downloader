@@ -1,0 +1,5 @@
+# Keep these Python dependencies in sync with pyproject.toml.
+# aria2c is a separate system dependency and must be installed separately.
+requests>=2.31,<3
+cryptography>=42
+textual>=8.2,<9
